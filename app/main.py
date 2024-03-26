@@ -38,6 +38,7 @@ def add_me(number_1: int, number_2: int):
     sum = number_1 + number_2
     return {"sum": sum}
 
+#This function performs multiplication on two numbers
 @app.get("/multiply/{number_1}/{number_2}")
 def multiply_num(number_1: int, number_2: int):
     ans = number_1 * number_2
