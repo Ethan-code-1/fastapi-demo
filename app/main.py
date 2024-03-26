@@ -18,8 +18,7 @@ app = FastAPI()
 @app.get("/")  # zone apex
 def zone_apex():
     return {"Hello": "Hello Anisha"}
-    
-    
+        
 # api calls within an api!
 @app.get("/github/repos/{user}")
 def github_user_repos(user):
@@ -38,6 +37,11 @@ def github_user_repos(user):
 def add_me(number_1: int, number_2: int):
     sum = number_1 + number_2
     return {"sum": sum}
+
+@app.get("/multiply/{number_1}/{number_2}")
+def multiply_num(number_1: int, number_2: int):
+    ans = number_1 * number_2
+    return {"Product" : ans}
 
 ## Parameters
 # Introduce parameter data types and defaults from the Optional library
